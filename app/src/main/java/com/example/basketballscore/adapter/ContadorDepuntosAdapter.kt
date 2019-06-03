@@ -34,7 +34,7 @@ class ContadorDepuntosAdapter(): RecyclerView.Adapter<ContadorDepuntosAdapter.Vi
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         fun bind(item: ContadorP) = with(itemView){
             tv_grupo1.text = item.grupo1
-            tv_puntaje1.text = item.puntuacion1.toString()
+            tv_puntajeb.text = item.puntuacion1.toString()
             tv_puntajea.text = item.puntuacion2.toString()
             tv_grupo2.text = item.grupo2
             tv_fecha.text = item.date

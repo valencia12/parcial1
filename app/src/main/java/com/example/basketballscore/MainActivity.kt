@@ -27,16 +27,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         viewModel = ViewModelProviders.of(this).get(puntosViewModel::class.java)
         fragment = FragmentHistorialPartidas.newInstance()
-        val scoreAObserver = Observer<Int>{ newValueA ->
+        val AObserver = Observer<Int>{ newValueA ->
             tv_puntaje1.text = newValueA.toString()
         }
-        val scoreBObserver = Observer<Int> { newValueB ->
+        val BObserver = Observer<Int> { newValueB ->
             tv_puntaje2.text = newValueB.toString()
         }
-        viewModel.puntuacion1.observe(this, scoreAObserver)
-        viewModel.puntuacion2.observe(this,scoreBObserver)
-        val buttonSaveMatch = findViewById<Button>(R.id.a)
-        buttonSaveMatch.setOnClickListener { click() }
+        viewModel.puntuacion1.observe(this, AObserver)
+        viewModel.puntuacion2.observe(this,BObserver)
+        val buttonSave = findViewById<Button>(R.id.a)
+        buttonSave.setOnClickListener { click() }
         bthistorial.setOnClickListener {
             changeFragment(R.id.main1, fragment)
         }
