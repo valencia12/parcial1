@@ -20,6 +20,8 @@ class puntosViewModel(application: Application): AndroidViewModel(application){
 
     val puntuacion1 = MutableLiveData<Int>().apply { postValue(0) }
     val puntuacion2 = MutableLiveData<Int>().apply { postValue(0) }
+
+
     init {
 
         val ContadorDao = hRoomDatabase.getDatabase(application).ContadorDao()

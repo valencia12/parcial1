@@ -7,12 +7,12 @@ import com.example.basketballscore.database.daos.ContadorDao
 import com.example.basketballscore.database.entities.ContadorP
 
 
-class ContadorRepo(private val ContadorRepo: ContadorDao){
+class ContadorRepo(private val ContadorDao: ContadorDao){
 
-    val part : LiveData<List<ContadorP>> = ContadorRepo.getAllMatches()
+    val part : LiveData<List<ContadorP>> = ContadorDao.getAll()
 
     @WorkerThread
     suspend fun insert(ContadorP: ContadorP){
-        ContadorRepo.insert(ContadorP)
+        ContadorDao.insert(ContadorP)
     }
 }

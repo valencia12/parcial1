@@ -35,12 +35,12 @@ class MainActivity : AppCompatActivity() {
         }
         viewModel.puntuacion1.observe(this, scoreAObserver)
         viewModel.puntuacion2.observe(this,scoreBObserver)
-        val btnGuardar = findViewById<Button>(R.id.a)
-        btnGuardar.setOnClickListener { click() }
-        a.setOnClickListener {
+        val buttonSaveMatch = findViewById<Button>(R.id.a)
+        buttonSaveMatch.setOnClickListener { click() }
+        bthistorial.setOnClickListener {
             changeFragment(R.id.main1, fragment)
         }
-        // TEAM A
+
         grupo1_3.setOnClickListener {
             coun1 +=3
             viewModel.puntuacion1.value = coun1
@@ -74,19 +74,19 @@ class MainActivity : AppCompatActivity() {
         if(TextUtils.isEmpty(et_grupo1.text) && TextUtils.isEmpty(et_grupo2.text)){
             Toast.makeText(applicationContext, "Please fill all the fields", Toast.LENGTH_SHORT).show()
         }else{
-            var teamA = et_grupo1.text.toString()
-            var teamB = et_grupo2.text.toString()
-            var scoreA = tv_puntaje1.text.toString()
-            var scoreB = tv_puntaje2.text.toString()
+            var g1 = et_grupo1.text.toString()
+            var g2 = et_grupo2.text.toString()
+            var s1 = tv_puntaje1.text.toString()
+            var s2 = tv_puntaje2.text.toString()
             var winner:String
 
-            winner = if(scoreA.toInt() > scoreB.toInt()){
-                teamA
+            winner = if(s1.toInt() > s2.toInt()){
+                g1
             }else{
-                teamB
+                g2
             }
             var completar = "Fecha: " + format.format(calendar.time)
-            var play = ContadorP(teamA, teamB, scoreA.toInt(), scoreB.toInt(), completar, "5:12", winner)
+            var play = ContadorP(g1, g2, s1.toInt(), s2.toInt(), completar, "5:12", winner)
 
             viewModel.insert(play)
             Toast.makeText(applicationContext, "Inserted", Toast.LENGTH_LONG).show()

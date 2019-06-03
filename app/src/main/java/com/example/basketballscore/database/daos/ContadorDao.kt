@@ -11,7 +11,7 @@ import com.example.basketballscore.database.entities.ContadorP
 @Dao
 interface ContadorDao {
     @Query("SELECT * FROM Puntuacion_table")
-    fun getAllMatches() : LiveData<List<ContadorP>>
+    fun getAll() : LiveData<List<ContadorP>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(match: ContadorP)

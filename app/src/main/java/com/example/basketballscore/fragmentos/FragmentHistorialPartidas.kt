@@ -21,6 +21,7 @@ class FragmentHistorialPartidas : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         val view = inflater.inflate(R.layout.activity_fragment_historial, container, false)
         puntosViewModel = ViewModelProviders.of(this).get(puntosViewModel::class.java)
         initRecyclerView(view)
@@ -32,8 +33,8 @@ class FragmentHistorialPartidas : Fragment() {
         ContadorDePuntos = ContadorDepuntosAdapter()
         view.historial_rv.adapter = ContadorDePuntos
 
-        puntosViewModel.part.observe(this, Observer { partidas->
-            partidas?.let { ContadorDePuntos.setCounterPoint(it) }
+        puntosViewModel.part.observe(this, Observer { countPoint->
+            countPoint?.let { ContadorDePuntos.setCounterPoint(it) }
         })
 
         view.historial_rv.apply {
