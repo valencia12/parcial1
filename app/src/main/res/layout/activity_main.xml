@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:id="@+id/main1"
+              tools:context=".MainActivity">
+    <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@android:dimen/app_icon_size"
+            android:text="VS"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="573dp"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="459dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_grupo1"
+                    android:gravity="center"
+                    android:hint="@string/grupo_1"
+                    android:textStyle="bold"/>
+
+            <TextView
+                    android:id="@+id/tv_puntaje1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@android:dimen/app_icon_size"
+                    android:text="0"/>
+
+
+            <Button
+                    android:id="@+id/grupo1_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_3"/>
+
+            <Button
+                    android:id="@+id/grupo1_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_2"/>
+
+            <Button
+                    android:id="@+id/grupo1_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_1"/>
+
+            <Button
+                    android:id="@+id/a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Guardar"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="459dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_grupo2"
+                    android:gravity="center"
+                    android:hint="@string/grupo_2"
+                    android:textStyle="bold"/>
+
+            <TextView
+                    android:id="@+id/tv_puntaje2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@android:dimen/app_icon_size"
+                    android:text="0"
+            />
+
+            <Button
+                    android:id="@+id/grupo2_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_3"/>
+
+            <Button
+                    android:id="@+id/grupo2_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_2"/>
+
+            <Button
+                    android:id="@+id/grupo2_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_1"/>
+
+            <Button
+                    android:id="@+id/bthistorial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ver_historial"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

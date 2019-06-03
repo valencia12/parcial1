@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="70dp"
+                  android:layout_weight="5"
+                  android:orientation="horizontal"
+    >
+        <TextView android:layout_width="0dp"
+                  android:layout_gravity="center"
+                  android:id="@+id/tv_grupo1"
+                  android:textStyle="bold"
+                  android:textAlignment="center"
+                  android:layout_weight="1"
+                  android:text="@string/grupo_11"
+                  android:layout_height="70dp"/>
+
+        <TextView android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:id="@+id/tv_puntajea"
+                  android:textColor="@color/colorPrimary"
+                  android:textAlignment="center"
+                  android:textSize="@android:dimen/app_icon_size"
+                  android:text="0"
+                  android:layout_height="70dp"/>
+        <TextView android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:textAlignment="center"
+                  android:textSize="20dp"
+                  android:text="@string/vs"
+                  android:layout_height="70dp"/>
+        <TextView android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:textAlignment="center"
+                  android:textColor="@color/colorPrimary"
+                  android:id="@+id/tv_puntajeb"
+                  android:textSize="@android:dimen/app_icon_size"
+                  android:text="0"
+                  android:layout_height="70dp"/>
+        <TextView android:layout_width="0dp"
+                  android:layout_gravity="center"
+                  android:id="@+id/tv_grupo2"
+                  android:textAlignment="center"
+                  android:layout_weight="1"
+                  android:text="Grupo 2"
+                  android:textStyle="bold"
+                  android:layout_height="70dp"/>
+
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="630dp"
+                  android:layout_weight="5"
+                  android:orientation="horizontal"
+    >
+        <TextView android:layout_width="112dp"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/tv_fecha"
+                  android:textAlignment="center"
+                  android:textColor="@color/colorPrimary"
+                  android:textSize="30dp"
+                  android:text="@string/date"
+        />
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/GANADOR"
+                  android:textAlignment="center"
+                  android:textSize="30dp"
+                  android:layout_marginLeft="150dp"
+                  android:id="@+id/tv_ganador"/>
+    </LinearLayout>
+
+</LinearLayout>
